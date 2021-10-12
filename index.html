@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3-anketa_oper</title>
+</head>
+<body>
+	<script>
+		let surname = prompt('Введите вашу Фамилию.');
+		let name = prompt('Введите ваше Имя.');
+		let patron = prompt('Введите ваше Отчество.');
+		let age = prompt('Введите ваш Возраст.');
+		let male = confirm('Ваш пол Мужской?');
+        let gender = (male) ? 'мужской' : 'женский';
+        let retired = (gender == 'мужской' && age >= 62 || gender == 'женский' && age >= 57) ? 'да' : 'нет';
+		alert(`ФИО: ${surname} ${name} ${patron}
+возраст, лет: ${age}
+возраст, дней: ${age * 365}
+пол: ${gender}
+пенсионный возраст: ${retired}`)
+	</script>
+</body>
+</html>
